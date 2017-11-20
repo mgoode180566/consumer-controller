@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: employee-consumer
+server:
+  port: 8092
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8090/eureka}
+    healthcheck:
+      enabled: false
+      duration: 5
+    register-with-eureka: true
